@@ -110,7 +110,7 @@
 //         var current = 1;
 //         var back = 0;
 //         var future = 2;
-//             for(j = 0; j < n;j){
+//             for(var j = 0; j < n;j){
 //                 future = current + back;
 //                 back = current;
 //                 current = future;
