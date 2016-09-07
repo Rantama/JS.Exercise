@@ -71,21 +71,39 @@
 
 //exercise 5
 
-// function distance(x1, x2, y1, y2, z1, z2){
+// //Chapter 4 exercise 5
+// var x1 = 1, y1 = 2, z1 = 1;
+// var x2 = 2, y2 = 2, z2 = 4;
+//
+// // function distance2d () {
+// // return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
+//
+// // }
+// // console.log(distance2d());
+//
+// // function distance3d () {
+// // return Math.sqrt(Math.pow((x2-x1), 2) + Math.pow((y2 -y1), 2) + Math.pow((z2 - z1), 2));
+// // }
+// // console.log(distance3d());
+//
+// function distance(x1, x2, y1, y2, z1, z2) {
+// 	if (arguments.length < 4){
+// 		return "Insuficient parameter"
+// 	}
+// 	return Math.sqrt(Math.pow((x2-x1), 2));
+// }
+//
+// console.log(distance(x1, x2));
+//
+// function distance3d1(x1, x2, y1, y2, z1, z2) {
+// 	if (arguments.length < 6){
+// 		return "Insuficient parameter"
+// 	}
+// 	return Math.sqrt(Math.pow((x2-x1), 2));
+// }
+//
+// console.log(distance3d1(x1, x2));
 
-// 	if((x1 === null) || (x2 === null) || (y1 === null) || (y2===null)) {
-//   		return console.log("This value is not a number");
-// }
-
-// 	if(isNaN(x1)||(isNaN(x2))||(isNaN(y1))||(isNaN(y2))){
-//     	return console.log("Insufficient data");
-// }
-// 	if((z1 === null) || (z2 === null)){
-//     	return Math.sqrt(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2));
-// }
-// 	return Math.sqrt(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2) + Math.pow((z1 - z2), 2));
-// }
-// console.log(distance(1, 2, 2, 2, 1, -3));
 
 // exercise 6
 
