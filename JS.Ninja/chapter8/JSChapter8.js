@@ -19,7 +19,7 @@
 //  console.log(cars[test]);
 // }
 // function toStop() {
-// clearInterval(cars);
+// clearInterval(toStart);
 // }
 //
 // console.log(x)
