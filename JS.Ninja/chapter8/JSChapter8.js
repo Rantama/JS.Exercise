@@ -15,12 +15,14 @@
 // max = Math.floor(1);
 // test = 0;
 // function peak(){
-//  test  = Math.floor(Math.random() * (max-min))+min;
-//  console.log(cars[test]);
-// }
-// function toStop() {
+// 	test++;
+//  var i  = Math.floor(Math.random() * (max-min))+min;
+//  console.log(cars[i]);
+//  if (test === 10){
 // clearInterval(toStart);
 // }
+// }
+//
 //
 // console.log(x)
 // console.log(toStart);
