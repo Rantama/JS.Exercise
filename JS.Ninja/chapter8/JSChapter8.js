@@ -1,5 +1,5 @@
 // var x = "These are the cars I like";
-// var toStart = setInterval(peak, 1000);
+// var toStart = setInterval(peak, 60000);
 // var cars = {
 //
 //  1: "pathfinder is a good family car",
