@@ -33,33 +33,15 @@
 
 function printAttr (el, array) {
   for (i = 0; i < array.length; i++) {
-el.getAttribute(div)  }
+
+console.log(el.getAttribute(array[i]));
+ }
 
 }
+var div = document.getElementsByTagName("div")[0]
+printAttr (div, ["id", "class", "style", "val"]);
 
-function style(element,name,value){
-    name = name.replace(/-([a-z])/ig,
-                        function(all,letter){
-                          return letter.toUpperCase();
-                        });
 
-    if (typeof value !== 'undefined') {
-      element.style[name] = value;
-    }
-
-    return element.style[name];
-  }
-
-  window.onload = function() {
-    var div = document.getElementsByTagName(div)[0]
-    assert(true, div.getAttribute('id'));
-    assert(true, div.getAttribute('class'));
-    assert(true, div.getAttribute('style'));
-    assert(true, div.getAttribute('val'));
-    printAttr (el, ["id", "class", "style", "val"]);
-
-  }
-  console.log
 </script>
 </body>
 </html>
