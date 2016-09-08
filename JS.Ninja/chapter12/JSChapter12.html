@@ -41,7 +41,15 @@ console.log(el.getAttribute(array[i]));
 var div = document.getElementsByTagName("div")[0]
 printAttr (div, ["id", "class", "style", "val"]);
 
+function printAtt (el, array) {
+  for (i = 0; i < array.length; i++) {
 
+console.log(el.getAttribute(array[i]));
+ }
+
+}
+var div = document.getElementsByTagName("div")[0]
+printAtt (div, ["id", "val"]);
 
 </script>
 </body>
