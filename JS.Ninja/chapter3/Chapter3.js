@@ -50,14 +50,109 @@ return subadd(array);
 console.log(add(list));
 
 // Exercise 3
+// var a = myMath.add (1, 2, 3); //6
+// var b = myMath.mul (1, 2, 3); // 6
+// var c = myMath.fact ( 3); // 6
+
+// var myMath = {
+// 	add: function () {
+// 		var add = 0;
+// 		for(var i = 0; i < arguments.length; i++) {
+// 		add = add + arguments[i];
 //
-// 3. Create an object that will hold methods for adding, multiplying, and factorial operations.
+// 	}
+// 		return add;
 //
-//     Example:
-//     ```javascript
-//     var a = myMath.add (1, 2, 3); //6 var b = myMath.mul (1, 2, 3); // 6
+// },
+// 	mul: function () {
+// 		var mul = 1;
+// 		for (var i = 0; i < arguments.length; i++) {
+// 			mul = mul * arguments[i];
+// 		}
+// 		return mul;
+// 	},
+// 	fact: function (f) {
+// 		var fact = 1;
+// 		for (var i = f; i > 1; i--){
+// 		fact = fact * i;
+// 		}
+// 		return fact;
+// 	}
 //
-//     var c = myMath.fact ( 3); // 6
-//     ```
-//
-//     Use of anonymous functions and functions as object properties (methods.)
+// };
+// var a = myMath.add (1, 2, 3); //6
+// var b = myMath.mul (1, 2, 3); // 6
+// var c = myMath.fact ( 3);
+// console.log(a);
+// console.log(b);
+// console.log(c)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//exercise 5
+// Create a function that will print out the properties of an object.
+
+// a. If one parameter is provided, it should print out all of the properties accessible by that object.
+
+// b. If a second, boolean value, parameter is provided, it should only print out the values that belong to the object instance itself if true.
+
+
+
+function CustomObject (a, b) {
+  this.a = a;
+  this.b = b;
+}
+CustomObject.prototype.c = function () { return this.a + this.b; };
+var obj = new CustomObject (1, 2);
+
+function printObjProp (obj, sample) {
+	var lock = "";
+	if(!sample) {
+		for(var key in obj) {
+			lock = lock+ " " +key;
+			console.log(lock);
+
+
+		}
+
+	}
+	else
+	if (sample) {
+		for(key in obj) {
+			if(obj.hasOwnProperty(lock))
+			lock = lock+ " " +key;
+			console.log(lock);
+		}
+	}
+}
+
+
+
+
+printObjProp (obj); // output: a, b, c
+printObjProp (obj, false); // output: a, b, c
+printObjProp (obj, true); // output: a, b
