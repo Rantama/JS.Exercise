@@ -1,38 +1,58 @@
-// function Shape(color){
+//chapter 6
+// Create a set of object types that describe a series of related objects that may share behavior and/or attributes. Code the example and another set of classes different from the example. Add properties/methods as needed.
+
+// Example:
+
+// Shape //{ pEdges, fnDisplay }
+// Quadrilateral is Shape //{ fnArea, fnPerimeter}
+// Square is Quadrilateral //{ }
+// Triangle is Shape //{fnArea, fnPerimeter}
+// Use of inheritance, prototype, and function overwriting.
+
+
+//
+//
+// function Shape(color, fnArea, fnPerimeter){
 // this.pEdges= 0;
-// this.fnDisplay = true;
 // this.color = color;
+// this.basic ="What Shape";
+// this.pEdges = 0;
+// this.fnDisplay = 'shown';
 // }
 // //children
-// function Quadrilateral(color){
-// fnArea = "Area of a Quadrilateral";
-// fnPerimeter = "Perimeter of a Quadrilateral";
+// function Quadrilateral(color, fnArea, fnPerimeter){
+// this.fnArea = "Area of a Quadrilateral";
+// this.fnPerimeter = "P = (AB+ BC + CD + DA)";
+// this.shape = "Quadrilateral"
 // Shape.call(this, color);
 // }
-// function Triangle(color){
-// this.size = 'medium';
+// function Triangle(color, fnArea, fnPerimeter){
+// this.shape = 'Triangle';
+// this.fnArea= "A = (h *b)/2";
+// this.fnPerimeter = "P = A + B + C"
+// this.size = 'large';
 // this.color = color;
 // Shape.call(this, color);{
 // this.pEdges = 3;
 // }
 // }
 // //grandchild
-// function Square(color){
-// this.size= "med";
-// this.color = color;
-// Quadrilateral.call(this, color);
+// function Square(color, fnArea, fnPerimeter){
+// this.subShape = "Square"
+// Quadrilateral.call(this, color, fnArea, fnPerimeter);
 // this.pEdges = 4;
 // }
 //
 //
 // Quadrilateral.prototype = new Shape();
 // Square.prototype = new Quadrilateral();
+// Triangle.prototype = new Shape();
 //
 // Shape.prototype.test=function(){
-// return " These are polygons";
+// return " Triangles are not Quadrilateral";
 // };
-// var sqr = new Square('blue');
-// var tri = new Triangle('tan');
+// var sqr = new Square('black');
+// var tri = new Triangle('red');
 // console.log(sqr);
 // console.log(tri);
-// console.log(sqr.test());
+// console.log(tri.test());

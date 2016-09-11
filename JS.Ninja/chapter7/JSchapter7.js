@@ -169,4 +169,4 @@ function shift(result){
 //      console.log(newstring)
 
 
-// if I replace the link, it will work.  The only thing not working is the link then.
+// if I takeout the link, it will work.  The only thing not working is the link then.
