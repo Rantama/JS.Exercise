@@ -1,56 +1,17 @@
-<!-- // <div id=’a’ class=’square’ style=’display:inline­block’ val=’something important’></div>
-// <p id=’newP’ class=’square’  carl=’import’></p> -->
-
-
-
-<!-- //Example:
-// var el = document.getElementById("a");
-// printAttr (el, [‘id’, ‘class’, ‘style’, ‘val’]);
-// should print out:
-// a
-// square
-// display:inline­block
-// something important
-
-// printAttr (el, [‘id’, ‘var’]);
-// should print out:
-//a
-//something important -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>\
-    </title>
-  </head>
-  <body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>repl.it</title>
+</head>
+<body>
 
 <div id = 'a' class = 'square' style = 'display:inlineblock' val = 'something important'></div>
 <p id=’newP’ class=’square’  carl=’import’></p>
 
-<script type="text/javascript">
 
 
-function printAttr (el, array) {
-  for (i = 0; i < array.length; i++) {
 
-console.log(el.getAttribute(array[i]));
- }
-
-}
-var div = document.getElementsByTagName("div")[0]
-printAttr (div, ["id", "class", "style", "val"]);
-
-function printAtt (el, array) {
-  for (i = 0; i < array.length; i++) {
-
-console.log(el.getAttribute(array[i]));
- }
-
-}
-var div = document.getElementsByTagName("div")[0]
-printAtt (div, ["id", "val"]);
-
-</script>
 </body>
 </html>
