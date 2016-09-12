@@ -45,7 +45,7 @@
 
 // var myArray = ["Long", "John", "Michael", "David", "Patterson", "Christopher"];
 //   function thisLength(str2){
-//   //console.log(part2[0].length);
+//
 //     console.log(str2.sort(function(a, b){
 //         return cons_count(b) - cons_count(a);
 //     }));
@@ -199,11 +199,11 @@
        //         for(var key in obj){
        //             console.log(key);
        //             if(Array.isArray(obj[key])){
-       //                 for(var i=0;i<obj[key].length;i++){
+       //                 for(var i=0;i < obj[key].length;i++){
        //                     if(Array.isArray(obj[key][i])){
-       //                         console.log('    '+obj[key][i]);
-       //                     }else{
-       //                         console.log('  '+obj[key][i]);
+       //                         console.log(''+obj[key][i]);
+       //                     }else {
+       //                         console.log(''+obj[key][i]);
 
        //                     }
        //                 }
