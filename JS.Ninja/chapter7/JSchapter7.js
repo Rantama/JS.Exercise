@@ -139,34 +139,15 @@ function shift(result){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //exercise 5 part 2
 //
-// var string ="...should never use yolo for any reason...";
-//
-//   var newstring = string.replace(/yolo/i, <a href ="https://twitter.com/search-home>" "#yolo"/a> );
-//      console.log(newstring)
+
+
+
+      var string ="...should never use yolo for any reason...";
+   		var x = string.replace("yolo", "#Jedi");
+   		console.log(x)
+
 
 
 // if I takeout the link, it will work.  The only thing not working is the link then.

@@ -67,3 +67,42 @@
 </body>
 
 </html>
+
+
+<!-- exercise 2 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Meter Reading</title>
+</head>
+<body>
+	<style>
+		#meter1::-webkit-meter-low-value(
+		background-color: red;)
+	</style>
+	<p id = "demo"></p>
+	<button onclick = "myReading">Submit</button>
+
+	<meter id = "meter1" value ="0" min = "0" max ="3"></meter>
+
+
+	 <script>
+	 	var button = document.getElementsByTagName('button')[0];
+		var x = document.getElementsByTagName('meter')[0];
+
+
+			button.addEventListener('click',myReading,false);
+
+	function myReading(demo){
+
+		x.value ++;
+		if(x.value === 3 ){
+		removeEventListener("click", myReading);
+	}
+}
+	 </script>
+</body>
+</html>
