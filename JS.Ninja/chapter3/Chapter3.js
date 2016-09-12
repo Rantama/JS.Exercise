@@ -205,20 +205,21 @@ function printObjProp (obj, sample) {
 	if(!sample) {
 		for(var key in obj) {
 			lock = lock+ " " +key;
-			console.log(lock);
+
 
 
 		}
-
+	console.log(lock);
 	}
 	else
 	if (sample) {
 		for(key in obj) {
-			if(obj.hasOwnProperty(lock))
-			lock = lock+ " " +key;
-			console.log(lock);
+			if(obj.hasOwnProperty(key))
+			// lock = lock+ " " +key;
+			console.log(key);
 		}
 	}
+
 }
 
 

@@ -91,71 +91,74 @@
 // The new tech­support employee must be able to find users and equipment as quickly as possible.
 // Use of memoization and implementation of a simple searching algorithm.
 //
-//   var building={
-//   F1:{
-//       R1:["pc","mouse", "Keyboard", "Monitor", "Suzie"],
-//       R2:["MAC","mouse", "Keyboard", "Monitor", "John"],
-//       R3:["Printer", "Copy Machine"]  },
-//   F2:{
-//       R1:["pc","mouse", "Keyboard", "Monitor", "Kristina"],
-//       R2:["MAC","mouse", "Keyboard", "Monitor", "Jose"],
-//       R3:["Printer", "Copy Machine"]
-//   },
-//   F3:{
-//       R1:["pc","mouse", "Keyboard", "Monitor", "Donovan"],
-//       R2:["MAC","mouse", "Keyboard", "Monitor", "Jaime"],
-//       R3:["Printer", "Copy Machine"]
-//   },
-//   F4:{
-//       R1:["pc","mouse", "Keyboard", "Monitor", "Angela"],
-//       R2:["MAC","mouse", "Keyboard", "Monitor", "David"],
-//       R3:["Printer", "Copy Machine"]
-//   },
-//   F5:{
-//       R1:["pc","mouse", "Keyboard", "Monitor", "Hilary"],
-//       R2:["MAC","mouse", "Keyboard", "Monitor", "Trump"],
-//       R3:["Printer", "Copy Machine"]
-//   }
-// };
+var building={
+F1:{
+  R1:["pc","mouse", "Keyboard", "Monitor", "Suzie"],
+  R2:["MAC","mouse", "Keyboard", "Monitor", "John"],
+  R3:["Printer", "Copy Machine"]  },
+F2:{
+  R1:["pc","mouse", "Keyboard", "Monitor", "Kristina"],
+  R2:["MAC","mouse", "Keyboard", "Monitor", "Jose"],
+  R3:["Printer", "Copy Machine"]
+},
+F3:{
+  R1:["pc","mouse", "Keyboard", "Monitor", "Donovan"],
+  R2:["MAC","mouse", "Keyboard", "Monitor", "Jaime"],
+  R3:["Printer", "Copy Machine"]
+},
+F4:{
+  R1:["pc","mouse", "Keyboard", "Monitor", "Angela"],
+  R2:["MAC","mouse", "Keyboard", "Monitor", "David"],
+  R3:["Printer", "Copy Machine"]
+},
+F5:{
+  R1:["pc","mouse", "Keyboard", "Monitor", "Hilary"],
+  R2:["MAC","mouse", "Keyboard", "Monitor", "Trump"],
+  R3:["Printer", "Copy Machine"]
+}
+};
 
-// Function.prototype.memoized = function(key){
-// 	this._value =this._value ||{};
-// 	return this._values[key]!== undefined ?
-// 	this._values[key] :
-// 	this._values[key] = this.apply(this, arguments);
-// };
-// Function.prototype.memoize = function(){
-//     var fn = this;
-//     return function(){
-//       return fn.memoized.apply( fn, arguments );
-//     };
-// };
-// var searchFn= (function(obj,value){
-// var room;
-// // var floor;
-// // var result=[];
-// // function search(obj,value){
-// //     for(var key in obj){
-// //         if(Array.isArray(obj[key])){
-// //             room=key;
-// //             for(var i=0;i<obj[key].length;i++){
-// //                 if(obj[key][i]==value){
-// //                     result.push(value + ": (Room: "+room+" Floor "+floor);
-// //                 }
-// //             }
-// //         }else if(typeof obj[key]== 'object'){
-// //             floor=key;
-// //             search(obj[key],value);
-// //         }
-// //     }
-// // }
-// // search(obj,value);
-// // return result;
-// // })memoize();
-// // console.log(building);
-// // console.log(searchFn(building, "MAC"));
-// // console.log(searchFn(building, "mouse"));
-// // console.log(searchFn(building, "pc"));
-// // console.log(searchFn(building, "Monitor"));
-// // console.log(searchFn(building, "Keyboard"));
-// // console.log(searchFn(building, "Copy Machine"));
+Function.prototype.memoized = function(key){
+  this._values = this._values || {};
+  return this._values[key] !== undefined ?
+    this._values[key] :
+    this._values[key] = this.apply(this, arguments);
+};
+Function.prototype.memoize = function(){
+  var fn = this;
+  return function(){
+    return fn.memoized.apply( fn, arguments);
+  };
+};
+
+
+var searchFn=(function(value,obj){
+var room;
+var floor;
+var result = [];
+function search(value,obj){
+for(var key in obj){
+  if(Array.isArray(obj[key])){
+      room = key;
+      for(var i = 0; i < obj[key].length;i++){
+          if(obj[key][i] == value){
+              result.push(value + ": (Room: "+room+" Floor "+floor);
+          }
+      }
+  }else if(typeof obj[key]== 'object'){
+      floor=key;
+      search(value, obj[key]);
+  }
+}
+}
+search(value, obj);
+return result;
+}).memoize();
+
+console.log(building);
+console.log(searchFn("MAC",building));
+console.log(searchFn("mouse", building));
+console.log(searchFn("pc", building));
+console.log(searchFn("Monitor", building));
+console.log(searchFn("Keyboard", building));
+console.log(searchFn("Copy Machine", building));

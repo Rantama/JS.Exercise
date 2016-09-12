@@ -74,49 +74,52 @@
 // //Chapter 4 exercise 5
 // var x1 = 1, y1 = 2, z1 = 1;
 // var x2 = 2, y2 = 2, z2 = 4;
-//
-// // function distance2d () {
-// // return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
-//
-// // }
-// // console.log(distance2d());
-//
-// // function distance3d () {
-// // return Math.sqrt(Math.pow((x2-x1), 2) + Math.pow((y2 -y1), 2) + Math.pow((z2 - z1), 2));
-// // }
-// // console.log(distance3d());
-//
-// function distance(x1, x2, y1, y2, z1, z2) {
-// 	if (arguments.length < 4){
-// 		return "Insuficient parameter"
-// 	}
-// 	return Math.sqrt(Math.pow((x2-x1), 2));
-// }
-//
-// console.log(distance(x1, x2));
-//
-// function distance3d1(x1, x2, y1, y2, z1, z2) {
-// 	if (arguments.length < 6){
-// 		return "Insuficient parameter"
-// 	}
-// 	return Math.sqrt(Math.pow((x2-x1), 2));
-// }
-//
-// console.log(distance3d1(x1, x2));
+// distance(x1, x2, y1, y2, z1, z2);
+
+// function distance(n){
+//       	if(arguments.length==4)
+//       	{
+//       		return
+//       		Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
+//       		}
+//       	if(arguments.length==6)
+//       	{
+//       		return Math.sqrt(Math.pow((x2-x1), 2) + Math.pow((y2 -y1), 2) + Math.pow((z2 - z1), 2));
+//       		}
+//       	else
+//       	{
+//       		console.log("Insufficient parameters");
+//       	}
+//       }
+
+
+
 
 
 // exercise 6
 
+function distance(x1, x2, y1, y2, z1, z2)
+{
+    if ((arguments.length == 2) && (arguments[0].length == arguments[1].length) == 3)
+    {
+      var sum=0;
+      var array =[],arr=[];
+      array[n]=argumnets[0];
+      arr[n]=argumnets[1];
+      console.log(array,arr);
+      for (var i = 0; i < array.length; i++) {
+          sum += Math.pow(array[i] - arr[i], 2);
+      }
+      sum = Math.sqrt(sum);
+      return sum;
+      } else if (arguments.length == 4) {
+      		return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
 
-// function distance(x1, x2, y1, y2){
+      } else if (arguments.length == 6) {
+      		return Math.sqrt(Math.pow((x2-x1), 2) + Math.pow((y2 -y1), 2) + Math.pow((z2 - z1), 2));
+      } else
 
-// 	if((x1	===	null)	||	(x2 === null) || (y1 === null) || (y2 === null)){
-//   		return console.log("This is not a number");
-// }
-// 	if(isNaN(x1)||(isNaN(x2))||(isNaN(y1))||(isNaN(y2))){
-//  		return console.log("Insufficient data");
-// }
-// 		return Math.sqrt(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2));
-// }
-
-// console.log(distance(1, 2, 2, 2));
+      return "incompatible point";
+      }
+console.log(distance(1, 2, 2, 2));
+console.log(distance([1, 1], [2, 2, 4]));
