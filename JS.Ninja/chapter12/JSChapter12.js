@@ -9,3 +9,4 @@ function printAttr (el, array) {
   var el = document.getElementById('a');
 
 console.log( printAttr (el, ['id', 'class', 'style', 'val']));
+console.log(printAttr(el, ['id','var']));
