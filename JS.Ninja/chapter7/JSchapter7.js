@@ -143,10 +143,10 @@ function shift(result){
 //
 
 
-
+      new RegExp([name]);
       var string ="...should never use yolo for any reason...";
-   		var x = string.replace("yolo", "#Jedi");
-   		console.log(x)
+   		var name = string.replace("yolo", "#Jedi");
+   		console.log(<a.href = "http//:twitter.com">name</a>);
 
 
 
