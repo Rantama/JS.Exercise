@@ -27,13 +27,14 @@ function buildTree(tree) {
 
 		if(typeof tree[k] == "object" && tree[k] !== null){
 
+			//console.log(k); //moved grand children but not the children
 			console.log(" " . repeat(numb) + (k));
 			numb++;
 			buildTree(tree[k]);
 
 		} else {
 
-			// console.log(tree[k])  // did not move all of the children to the next point
+			 //console.log(tree[k])  // did not move all of the children to the next point
 			console.log(" " . repeat(numb) + [k]);  //moved all the children to the correct spaces
 		}
 
