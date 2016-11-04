@@ -148,6 +148,8 @@ function shift(result){
    		var name = string.replace("yolo", "#Jedi");
    		console.log(<a.href = "http//:twitter.com">name</a>);
 
+      //link is making code not work.
+
 
 
 // if I takeout the link, it will work.  The only thing not working is the link then.
