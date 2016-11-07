@@ -1,13 +1,8 @@
-define([''] function add_button() {
-    var title_val = document.getElementById('title_val').value;
+define(function(e){ document.getElementById('add_button').addEventListener('click',function() {
+	var value = document.getElementById('title_val').value;
+	if (value) addItemTodo(value);
 
-    var todo = get_todo();
-    todo.push(title_val);
-    localStorage.setItem('todo', JSON.stringify(todo));
-
-    show();
-
-    return false;
-}
-
+  var storeTodo = document.getElementById('todo').innerHTML;
+		localStorage.setItem('todo', storeTodo);
 })
+});

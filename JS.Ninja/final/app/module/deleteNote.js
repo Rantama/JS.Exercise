@@ -1,6 +1,14 @@
-// define( function removeItem (e) {
-// 		var title_val = this.parentNode.parentNode;
-// 		var parent = title_val.parentNode;
+// define( function removeItem() {
+//     console.log("Remove item")
+// 		var listItem = this.parentNode;
+// 		var ul = listItem.parentNode;
 //
-// 		parent.removeChild(title_val);
-// }
+// 		ul.removeChild(listItem);
+// });
+
+// define(function(e){ document.getElementById('add_button').addEventListener('click',function() {
+// 	var value = document.getElementById('title_val').value;
+// 	if (value) addItemTodo(value);
+//
+// })
+// });
