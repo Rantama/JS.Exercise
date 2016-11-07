@@ -1,8 +1,10 @@
+
+
 var removeIMG = '<img src="images/deletebutton.jpeg" class="smalls">';
 
-var saveIMG = '<img src="images/saveicon.png" class="smalls">'
+var saveIMG = '<img src="images/saveicon.png" class="smalls">';
 
-var editIMG = '<img src="images/editbutton.png" class="smalls">'
+var editIMG = '<img src="images/editbutton.png" class="smalls">';
 
 document.getElementById('add_button').addEventListener('click',function() {
 	var value = document.getElementById('title_val').value;
@@ -11,6 +13,13 @@ document.getElementById('add_button').addEventListener('click',function() {
 
 });
 
+//
+function removeItem (e) {
+		var title_val = this.parentNode.parentNode;
+		var parent = title_val.parentNode;
+
+		parent.removeChild(title_val);
+}
 function addItemTodo(text) {
 
 	var list = document.getElementById('todo');
@@ -24,6 +33,9 @@ function addItemTodo(text) {
 	var remove = document.createElement('button');
 	remove.classList.add('remove');
 	remove.innerHTML = removeIMG;
+
+	//move to delete.js
+	remove.addEventListener('click', removeItem);
 
 	var edit = document.createElement('button');
 	edit.classList.add('edit');
