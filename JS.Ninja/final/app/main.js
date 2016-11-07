@@ -16,7 +16,7 @@ function addItemTodo(text) {
 	var list = document.getElementById('todo');
 
 	var title_val = document.createElement('li');
-	item.innerHTML = text;
+	title_val.innerText = text;
 
 	var buttons = document.createElement('div');
 	buttons.classList.add('buttons');
