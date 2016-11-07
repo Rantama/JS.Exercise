@@ -80,7 +80,7 @@ img.small  {
 .new_item {
   display: inline-flex;
   width: 100%;
-  height: 15%;
+  height: 25%;
   /*float: left;*/
   background-color: white;
   /*border-bottom-right-radius: 20px;
@@ -89,6 +89,9 @@ img.small  {
 
 }
 
+ul li {
+  height: 50px;
+}
 
 .new_item:last-of-type {
 
@@ -109,9 +112,9 @@ img.small  {
 }
 
 .description textarea{
-  width: 90%;
-  height: 100%;
-  float: right;
+  width: 50%;
+  height: 50px;
+  float: left;
 
 
 }

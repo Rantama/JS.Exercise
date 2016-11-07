@@ -1,11 +1,11 @@
-define([], function edit_item(no) {
+define(function edit(no) {
 
- document.getElementById('edit_button'+no).addEventListener("click", edit_item).style.display="none";
-  document.getElementById('save_button'+no).addEventListener("click", save_item).style.display="block"
+ document.getElementByClass('edit'+no).addEventListener("click", edit_item).style.display="none";
+  document.getElementByClass('save'+no).addEventListener("click", save_item).style.display="block"
 
-var item=document.getElementsById("new_item"+no);
-var item_data=item.innerHTML;
+var title_val=document.getElementsById("new_title_val"+no);
+var title_val_data=title_val.innerHTML;
 
-item.innerHTML="input type='text' id='item_text'"+no+"' value='"+item_data+"'>"
+title_val.innerHTML="input type='text' id='title_val_text'"+no+"' value='"+title_val_data+"'>"
 
 });
