@@ -1,5 +1,5 @@
 define(function(){
-  (function load(){
-    section.innerHTML=storedItem;
-  })();
+  // (function (load){
+  //   section.innerHTML=storedItem;
+  // })();
 })
