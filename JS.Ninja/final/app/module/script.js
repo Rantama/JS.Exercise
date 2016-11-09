@@ -1,3 +1,5 @@
-require(['app/module/addNote', 'app/module/showanddeleteNote'], function (addNote, load) {
-	addButton.addEventListener('click',  false);
-})
+
+requirejs(['app/module/addNote', 'app/module/showanddeleteNote', 'app/module/saveNote'], function(addNote, saveNote) {
+  var load ="";
+    window.addEventListener('load', load);
+});

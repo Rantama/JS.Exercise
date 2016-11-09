@@ -1,11 +1,15 @@
-define(function formDisplay (e) {
-title_valForm.addEventListener('click', title_valForm).value;
-  function addingNewNotes(e) {
-    item.style.display='block';
-    itemCount ++;
-    if (itemCount>0) {
+define(function() {
+formDisplay.addEventListener('click', addingItems);
+console.log('hello');
+  function addingItems(e) {
+    itemForm.style.display='block';
+    itemFormCount ++;
+    if (itemFormCount>0) {
+      title_valForm.value='';
+      formDescription.value='';
 
-      formDescription.value=''
     }
+
   };
+
 });
