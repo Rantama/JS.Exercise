@@ -1,8 +1,11 @@
-define(function(e){ document.getElementById('add_button').addEventListener('click',function() {
-	var value = document.getElementById('title_val').value;
-	if (value) addItemTodo(value);
+define(function formDisplay (e) {
+title_valForm.addEventListener('click', title_valForm).value;
+  function addingNewNotes(e) {
+    item.style.display='block';
+    itemCount ++;
+    if (itemCount>0) {
 
-  var storeTodo = document.getElementById('todo').innerHTML;
-		localStorage.setItem('todo', storeTodo);
-})
+      formDescription.value=''
+    }
+  };
 });
