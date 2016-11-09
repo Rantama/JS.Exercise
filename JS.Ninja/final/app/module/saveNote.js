@@ -18,30 +18,31 @@ define(function saveForm(e) {
 
     var todoNote = document.createElement('div');
     var NoteItem = document.createElement('strong');
-    NoteItem.textContent = 'Title: '
-    todoNote.appendChild(NoteItem);
+    NoteItem.textContent = 'Title: ';
     var html = document.createElement('div');
     html.textContent = title_valForm.value;
     html.class = 'Item_title';
 
 
     var descriptionForm = document.createElement('div');
-    var strong = document.createElement('strong');
-    strong.textContent = 'Description:'
-    descriptionForm.appendChild(strong);
+    var NoteItem = document.createElement('strong');
+    NoteItem.textContent = 'Description:';
     var html = document.createElement('div');
     html.textContent = descriptionForm.value;
 
     new_Div.innerHTML = Date();
     new_Div.appendChild(img1);
     new_Div.appendChild(img2);
+    todoNote.appendChild(NoteItem);
     todoNote.appendChild(html);
     noteStorage.appendChild(todoNote);
     descriptionForm.appendChild(html);
+    descriptionForm.appendChild(NoteItem);
     noteStorage.appendChild(descriptionForm);
 
-    console.log('you')
+    console.log('you');
 
-
-
+    var storeLocal = container.innerHTML;
+    localStorage.setItem('storedValues', storeLocal);
+    saveButton.innerHTML = 'Save';
 });
