@@ -8,9 +8,9 @@ if (e.target.className =='noteEditting')
   itemForm.style.display = 'block';
 
   currentNode = e.target.parentNode;
-  title_valForm.value=currentNode.childNode[3].childNode[1].innerHTML;
-  formDescription.value=currentNode.childNode[4].childNode[1].innerHTML;
-  saveButton.innerHTML = 'edit';
+  title_note.value=currentNode.childNode[3].childNode[1].innerHTML;
+  descriptionNote.value=currentNode.childNode[4].childNode[1].innerHTML;
+  saveButton.innerHTML = 'Edit';
 
 }
 else if (e.target.className =='removingNote') {
