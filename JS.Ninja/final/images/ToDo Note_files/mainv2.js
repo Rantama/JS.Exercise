@@ -3,10 +3,7 @@ requirejs(['app/module/addNote', 'app/module/saveNote', 'app/module/showanddelet
     saveButton.addEventListener('click', saveNote);
     var formDisplay = document.getElementById('addButton');
     formDisplay.addEventListener('click', addNote);
-    var section = document.getElementById('container').innerHTML;
-    var editButton = document.createElement('editButton');
-    editButton.addEventListener('click', showanddeleteNote);
-
+    var body = document.getElementById('container').innerHTML;
 });
 
 var new_Div = document.createElement('div');
@@ -14,7 +11,7 @@ var new_Div = document.createElement('div');
 var title_note = document.getElementById('title');
 var itemForm = document.getElementById('todos');
 var editInput = document.createElement('input');
-
+var removeButton = document.createElement('button');
 var body = document.getElementById('container');
 var storedItem = localStorage.getItem('storedItems')
 var addItems = document.getElementById('addItem');

@@ -1,25 +1,25 @@
 define(['app/module/saveNote'], function() {
-container.addEventListener('click', showanddeleteNote);
+    // container.addEventListener('click', showanddeleteNote);
 
-function showanddeleteNote(e) {
+    function showanddeleteNote(e) {
 
-if (e.target.className =='noteEditting')
-{
-  itemForm.style.display = 'block';
 
-  currentNode = e.target.parentNode;
-  title_note.value=currentNode.childNode[3].childNode[1].innerHTML;
-  descriptionNote.value=currentNode.childNode[4].childNode[1].innerHTML;
-  saveButton.innerHTML = 'Edit';
+        if (e.target.className == 'noteEditting') {
+            itemForm.style.display = 'none';
 
-}
-else if (e.target.className =='removingNote') {
-e.target.parentNode.remove();
-var storeLocal=section.innerHTML;
-    localStorage.setItem('storedItem', storeLocal);
+            var currentNode;
+            currentNode = e.target.parentNode;
+            title_note.value = currentNode.childNode[3].childNode[1].innerHTML;
+            descriptionNote.value = currentNode.childNode[4].childNode[1].innerHTML;
+            saveButton.textContent = 'Edit';
 
-}
-}
-console.log("helllolo")
+        } else if (e.target.className == 'removingNote') {
+            e.target.parentNode.remove();
+            var storeLocal = section.innerHTML;
+            localStorage.setItem('storedItem', storeLocal);
 
-  });
+        }
+    }
+    console.log("helllolo")
+
+});

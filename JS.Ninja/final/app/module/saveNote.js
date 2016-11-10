@@ -20,9 +20,8 @@ define(function(e) {
             img1.src = "images/editbutton.png";
             button.appendChild(img1);
             noteStorage.appendChild(button);
+            var section = document.getElementById('container');
 
-            var br = document.createElement('br');
-            noteStorage.appendChild(br);
 
             var button1 = document.createElement('button');
             button1.setAttribute('class', 'removingNote')
@@ -32,7 +31,6 @@ define(function(e) {
             button1.appendChild(img2);
             noteStorage.appendChild(button1);
             var section = document.getElementById('container');
-
 
             var todoNote = document.createElement('div');
             var NoteItem = document.createElement('strong');
@@ -44,14 +42,16 @@ define(function(e) {
             todoNote.appendChild(NoteItem);
             todoNote.appendChild(html);
 
-            var descriptionNote = document.createElement('div');
+            var Notedescription = document.createElement('div');
             var NoteItem = document.createElement('strong');
-            NoteItem.textContent = 'Description:';
-            noteStorage.appendChild(descriptionNote);
+            NoteItem.textContent = 'Description: ';
+            noteStorage.appendChild(Notedescription);
             var html = document.createElement('div');
             html.textContent = descriptionNote.value;
-            descriptionNote.appendChild(html);
-            descriptionNote.appendChild(NoteItem);
+            html.class = 'Description_title';
+            Notedescription.appendChild(NoteItem);
+            Notedescription.appendChild(html);
+
 
             var createdDate = document.createElement('div');
             createdDate.className = 'dateCreation';
@@ -64,7 +64,7 @@ define(function(e) {
             section.appendChild(noteStorage);
 
         } else if (saveButton.textContent == 'Edit') {
-            itemForm.style.display = 'none';
+            itemForm.style.display = 'block';
 
 
             currentNode.childNodes[3].childNodes[1].textContent = title_note.value;
@@ -73,7 +73,6 @@ define(function(e) {
             currentNode = undefined;
 
         }
-
 
 
 
