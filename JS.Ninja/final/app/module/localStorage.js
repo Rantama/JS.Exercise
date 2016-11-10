@@ -1,5 +1,6 @@
 define(function(){
-  // (function (load){
-  //   section.innerHTML=storedItem;
-  // })();
+  (function (e){
+    var form = document.getElementById('container');
+    form.innerHTML=storedItem;
+  })();
 })

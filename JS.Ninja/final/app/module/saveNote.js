@@ -3,9 +3,10 @@ define(function(e) {
     return function(e) {
         e.preventDefault();
         if (saveButton.textContent == "Save") {
+
             itemForm.style.display = 'none';
 
-            var noteStorage = document.createElement('div');
+            var noteStorage = document.createElement('section');
             noteStorage.setAttribute('class', 'savedNoteStorage');
 
             var button = document.createElement('button');

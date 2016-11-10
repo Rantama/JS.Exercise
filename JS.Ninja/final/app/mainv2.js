@@ -18,7 +18,7 @@ var addItems = document.getElementById('addItem');
 var descriptionNote = document.getElementById('description');
 var body = document.getElementById('container').innerHTML;
 var storedItem = document.getElementById('storedItem');
-var section = document.getElementById('container');
+
 
 
 
