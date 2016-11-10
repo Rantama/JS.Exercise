@@ -67,10 +67,7 @@ define(function(e) {
             itemForm.style.display = 'block';
 
 
-            currentNode.childNodes[3].childNodes[1].textContent = title_note.value;
-            currentNode.childNodes[4].childNodes[1].textContent = descriptionNote.value;
-            currentNode.childNodes[6].innerHTML = '<b>Edited Time:</b> ' + Date();
-            currentNode = undefined;
+
 
         }
 
