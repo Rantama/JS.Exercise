@@ -16,7 +16,7 @@ var body = document.getElementById('container');
 var storedItem = localStorage.getItem('storedItems')
 var addItems = document.getElementById('addItem');
 var descriptionNote = document.getElementById('description');
-
+var section = document.getElementsByTagName('section')
 var storedItem = document.getElementById('storedItem');
 
 var itemFormCount = 0;
