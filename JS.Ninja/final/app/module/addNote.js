@@ -1,14 +1,14 @@
 define(function() {
 
-    console.log('hello');
+console.log('hello');
 
-    return function addingItems(e) {
+    return function add(e) {
       e.preventDefault();
         itemForm.style.display = 'block';
         itemFormCount++;
         if (itemFormCount > 0) {
-            title_valForm.value = '';
-            formDescription.value = '';
+            title_note.value = '';
+            descriptionNote.value = '';
 
         }
 

@@ -1,9 +1,10 @@
 define(['app/module/saveNote'], function() {
-editInput.addEventListener('click', showanddeleteNote);
+container.addEventListener('click', showanddeleteNote);
 
 function showanddeleteNote(e) {
 
-if (e.target.className =='noteEditting') {
+if (e.target.className =='noteEditting')
+{
   itemForm.style.display = 'block';
 
   currentNode = e.target.parentNode;
@@ -14,8 +15,8 @@ if (e.target.className =='noteEditting') {
 }
 else if (e.target.className =='removingNote') {
 e.target.parentNode.remove();
-var storedItem=section.innerHTML;
-    localStorage.setItem('storedValues', storedItem);
+var storeLocal=section.innerHTML;
+    localStorage.setItem('storedItem', storeLocal);
 
 }
 }
