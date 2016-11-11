@@ -43,9 +43,6 @@ body, input, button {
   float: right;
 }
 #addingItem {
-  overflow: hidden;
-  background-color: red;
-  border: 1px;
 
 }
 #title_val {
@@ -53,6 +50,7 @@ body, input, button {
 }
 
 #container {
+  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
 }
