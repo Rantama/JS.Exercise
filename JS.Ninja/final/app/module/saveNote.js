@@ -1,36 +1,38 @@
 define(function(e) {
     var saveButton = document.getElementById('save');
+      var section = document.getElementById('container');
     return function(e) {
         e.preventDefault();
 
-        var title_note = document.getElementById('title');
-        var descriptionNote = document.getElementById('description');
+
         if (saveButton.textContent == "Save") {
 
             itemForm.style.display = 'none';
 
+            var title_note = document.getElementById('title');
+            var descriptionNote = document.getElementById('description');
 
             var noteStorage = document.createElement('section');
             noteStorage.setAttribute('class', 'saveNotehere');
 
-            var button = document.createElement('button');
-            button.setAttribute('class', 'noteEditting');
+            var editButton = document.createElement('button');
+            editButton.setAttribute('class', 'noteEditting');
             var img1 = document.createElement('img');
             img1.className = "editButton";
             img1.src = "images/editbutton.png";
-            button.appendChild(img1);
-            noteStorage.appendChild(button);
-            var section = document.getElementById('container');
+            editButton.appendChild(img1);
+            noteStorage.appendChild(editButton);
+            // var section = document.getElementById('container');
 
 
-            var button1 = document.createElement('button');
-            button1.setAttribute('class', 'removingNote')
+            var removeButton = document.createElement('button');
+            removeButton.setAttribute('class', 'removingNote')
             var img2 = document.createElement('img');
             img2.className = "removeButton";
             img2.src = "images/deletebutton.jpeg";
-            button1.appendChild(img2);
-            noteStorage.appendChild(button1);
-            var section = document.getElementById('container');
+            removeButton.appendChild(img2);
+            noteStorage.appendChild(removeButton);
+
 
             var todoNote = document.createElement('div');
             var NoteItem = document.createElement('strong');
@@ -63,25 +65,27 @@ define(function(e) {
             noteStorage.appendChild(editedDate);
             section.appendChild(noteStorage);
 
-        } else if (saveButton.textContent == 'Edit') {
+        } else if (saveButton.textContent == 'Edit')
+        {
             itemForm.style.display = 'block';
 
 
-
+            currentNode.childNodes[6].childNodes[2].textContent = title_note.value;
+            currentNode.childNodes[12].childNodes[0].textContent = descriptionNote.value;
+            currentNode.childNodes[6].innerHTML = '<b>Edited Time:</b> ' + Date();
+            currentNode = undefined;
 
         }
 
 
 
-        console.log('today');
-
+        console.log(todos.childNodes);
+        //
         var storeLocal = container.innerHTML;
-        localStorage.setItem(itemFormCount++, 'storeLocal');
+        localStorage.setItem('storedItem', localStorage);
         saveButton.innerHTML = 'Save';
 
     }
-
-
 
 
 });
