@@ -13,8 +13,8 @@ define(['app/module/saveNote'], function(saveNote) {
           //  console.log(currentNode.childNodes);
 
 
-            var storeLocal = document.getElementById('container').innerHTML;
-            localStorage.setItem('storedItem', localStorage);
+            // var storeLocal = document.getElementById('container').innerHTML;
+            // localStorage.setItem('storedItem', localStorage);
             saveButton.innerHTML = 'Edit';
         } else if (e.target.className == 'removeButton'||e.target.className == 'removingNote')
 
@@ -25,8 +25,8 @@ define(['app/module/saveNote'], function(saveNote) {
           }else{
             e.target.parentNode.parentNode.remove()
           };
-            // var storeLocal = section.innerHTML;
-            // localStorage.setItem('storedItem', storeLocal);
+            var storeLocal = section.innerHTML;
+            localStorage.setItem('storedItem', storeLocal);
             // itemForm.style.position = 'absolute';
 
             // saveButton.textContent = 'Edit';
@@ -35,6 +35,6 @@ define(['app/module/saveNote'], function(saveNote) {
         }
     }
 
-    var storedItem = localStorage.getItem('storedItems');
-    document.getElementById('container').textContent = storedItem;
+    // var storedItem = localStorage.getItem('storedItems');
+    // document.getElementById('container').textContent = storedItem;
 });

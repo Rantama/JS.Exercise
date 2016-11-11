@@ -43,7 +43,7 @@ body, input, button {
   float: right;
 }
 #addingItem {
-
+overflow: hidden;
 }
 #title_val {
   text-indent: 10px;
@@ -53,6 +53,7 @@ body, input, button {
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
+  height:
 }
 
 #itemForm {

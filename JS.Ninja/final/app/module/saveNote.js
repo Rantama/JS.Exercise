@@ -65,6 +65,10 @@ define(function(e) {
             createdDate.innerHTML = '<b>Created Time:</b> ' + Date();
             noteStorage.appendChild(createdDate);
 
+
+            // var editDate = document.createElement('div');
+            // editDate.setAttribute('class', "dateEdited");
+            // section.storage
             var editedDate = document.createElement('div');
             editedDate.setAttribute('class', 'dateEdition');
             noteStorage.appendChild(editedDate);
@@ -72,23 +76,24 @@ define(function(e) {
 
         } else if (saveButton.textContent == 'Edit')
         {
-            itemForm.style.display = 'block';
+            itemForm.style.display = 'none';
 
             console.log(editObj);
 
             editObj.title.textContent = title_note.value;
             editObj.description.textContent = descriptionNote.value;
-            // currentNode.childNodes[4].innerHTML = '<b>Edited Time:</b> ' + Date();
+            currentNode.childNodes[5].innerHTML = '<b>Edited Time:</b> ' + Date();
 
 
         }
+
 
         var container = document.getElementById('container')
         console.log(todos.children)
         console.log('today');
 
         var storeLocal = container.innerHTML;
-        localStorage.setItem(storedItem, 'storeLocal');
+        localStorage.setItem('storedItem', storeLocal);
         saveButton.innerHTML = 'Save';
 
     },
