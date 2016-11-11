@@ -1,6 +1,6 @@
 define(function(){
   (function (e){
-    var form = document.getElementById('container');
-    form.textContent=storedItem;
+    var section = document.getElementById('container');
+    section.textContent=storedItem;
   })();
 })

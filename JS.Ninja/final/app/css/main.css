@@ -43,6 +43,7 @@ body, input, button {
   float: right;
 }
 #addingItem {
+  overflow: hidden;
   background-color: red;
   border: 1px;
 

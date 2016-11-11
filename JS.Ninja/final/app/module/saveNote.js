@@ -1,7 +1,13 @@
 define(function(e) {
     var saveButton = document.getElementById('save');
       var section = document.getElementById('container');
-    return function(e) {
+      var editObj = {
+        title:null,
+        description:null
+      }
+        var title_note = document.getElementById('title');
+        var descriptionNote = document.getElementById('description');
+    return {save:function(e) {
         e.preventDefault();
 
 
@@ -9,8 +15,7 @@ define(function(e) {
 
             itemForm.style.display = 'none';
 
-            var title_note = document.getElementById('title');
-            var descriptionNote = document.getElementById('description');
+
 
             var noteStorage = document.createElement('section');
             noteStorage.setAttribute('class', 'saveNotehere');
@@ -69,23 +74,28 @@ define(function(e) {
         {
             itemForm.style.display = 'block';
 
+            console.log(editObj);
 
-            currentNode.childNodes[6].childNodes[2].textContent = title_note.value;
-            currentNode.childNodes[12].childNodes[0].textContent = descriptionNote.value;
-            currentNode.childNodes[6].innerHTML = '<b>Edited Time:</b> ' + Date();
-            currentNode = undefined;
+            editObj.title.textContent = title_note.value;
+            editObj.description.textContent = descriptionNote.value;
+            // currentNode.childNodes[4].innerHTML = '<b>Edited Time:</b> ' + Date();
+
 
         }
 
+        var container = document.getElementById('container')
+        console.log(todos.children)
+        console.log('today');
 
-
-        console.log(todos.childNodes);
-        //
         var storeLocal = container.innerHTML;
-        localStorage.setItem('storedItem', localStorage);
+        localStorage.setItem(storedItem, 'storeLocal');
         saveButton.innerHTML = 'Save';
 
-    }
+    },
+    editObj:editObj
+  }
+
+
 
 
 });
