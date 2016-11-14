@@ -7,8 +7,7 @@ define(function() {
         title: null,
         description: null
     }
-    // var title_note = document.getElementById('title');
-    // var descriptionNote = document.getElementById('description');
+
     return {
         save: function(e) {
             e.preventDefault();
@@ -30,8 +29,6 @@ define(function() {
                 img1.src = "images/editbutton.png";
                 editButton.appendChild(img1);
                 noteStorage.appendChild(editButton);
-                // var section = document.getElementById('container');
-
 
                 var removeButton = document.createElement('button');
                 removeButton.setAttribute('class', 'removingNote')
@@ -68,13 +65,12 @@ define(function() {
                 createDate.className = 'dateCreation';
                 createDate.innerHTML = '<i>Created Time:</i> ' + Date();
                 noteStorage.appendChild(createDate);
-                // saveTodos();
 
                 var editDate = document.createElement('div');
                 editDate.setAttribute('class', 'dateEdited');
                 noteStorage.appendChild(editDate);
                 section.appendChild(noteStorage);
-                // saveTodos();
+
 
             } else if (saveButton.textContent == 'Edit') {
                 itemForm.style.display = 'none';
@@ -86,10 +82,6 @@ define(function() {
                 currentNode.childNodes[5].innerHTML = '<i>Edited Time:</i> ' + Date();
             }
 
-
-
-
-
             var container = document.getElementById('container')
             console.log(todos.children)
             console.log('today');
@@ -97,26 +89,6 @@ define(function() {
 
             var storeLocal = container.innerHTML
             localStorage.setItem('storedItems', storeLocal);
-
-            //save data to local storage
-            // function saveTodos() {
-            //     var storedItem = JSON.stringify(container);
-            //     localStorage.setItem('container', storedItem);
-            //     console.log('container')
-            // }
-            //
-            //
-            // function getTodos() {
-            //     var storedItem = localStorage.getItem('container');
-            //     todos = JSON.parse(storedItem);
-            //     if (!container) {
-            //         container = [];
-            //     }
-            // }
-
-            // var storeLocal = container.innerHTML
-            // localStorage.setItem('todos', storeLocal);
-            // getTodos();
             saveButton.innerHTML = 'Save';
 
         },
