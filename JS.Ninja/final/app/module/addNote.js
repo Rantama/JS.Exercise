@@ -1,7 +1,7 @@
 define(function() {
 console.log('hello');
 
-    return function add(e) {
+    return function (e) {
       e.preventDefault();
         itemForm.style.display='block';
         itemFormCount ++;

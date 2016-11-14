@@ -1,4 +1,4 @@
-define(function(e) {
+define(function() {
     var saveButton = document.getElementById('save');
     var section = document.getElementById('container');
     var storedItem;
@@ -7,10 +7,10 @@ define(function(e) {
         title: null,
         description: null
     }
-    var title_note = document.getElementById('title');
-    var descriptionNote = document.getElementById('description');
+    // var title_note = document.getElementById('title');
+    // var descriptionNote = document.getElementById('description');
     return {
-        save: function (e) {
+        save: function(e) {
             e.preventDefault();
 
 
@@ -52,6 +52,7 @@ define(function(e) {
                 todoNote.appendChild(html);
                 noteStorage.appendChild(todoNote);
 
+
                 var Notedescription = document.createElement('div');
                 var NoteItem = document.createElement('strong');
                 NoteItem.textContent = 'Description: ';
@@ -62,15 +63,18 @@ define(function(e) {
                 Notedescription.appendChild(html);
                 noteStorage.appendChild(Notedescription);
 
+
                 var createDate = document.createElement('div');
                 createDate.className = 'dateCreation';
                 createDate.innerHTML = '<i>Created Time:</i> ' + Date();
                 noteStorage.appendChild(createDate);
+                // saveTodos();
 
                 var editDate = document.createElement('div');
                 editDate.setAttribute('class', 'dateEdited');
                 noteStorage.appendChild(editDate);
                 section.appendChild(noteStorage);
+                // saveTodos();
 
             } else if (saveButton.textContent == 'Edit') {
                 itemForm.style.display = 'none';
@@ -80,7 +84,7 @@ define(function(e) {
                 editObj.title.textContent = title_note.value;
                 editObj.description.textContent = descriptionNote.value;
                 currentNode.childNodes[5].innerHTML = '<i>Edited Time:</i> ' + Date();
-}
+            }
 
 
 
@@ -91,27 +95,29 @@ define(function(e) {
             console.log('today');
 
 
-            // var storeLocal = container.innerHTML
-            // localStorage.setItem('storedItems', this.innerHTML);
-            function storedItems (){
-              var storedItem = JSON.stringify(todos);
-              localStorage.setItem('todos', storedItem);
-            }
+            var storeLocal = container.innerHTML
+            localStorage.setItem('storedItems', storeLocal);
 
-            saveButton.innerHTML = 'Save';
-
-            function getStoredItems() {
-              var itemForm = localStorage.getItem('todos');
-              todos = JSON.parse(itemForm);
-              if(!todos) {
-                todos = []
-              }
-            }
-            getStoredItems();
-            // var storeLocal = container.innerHTML
-            // localStorage.setItem('text', storeLocal);
+            //save data to local storage
+            // function saveTodos() {
+            //     var storedItem = JSON.stringify(container);
+            //     localStorage.setItem('container', storedItem);
+            //     console.log('container')
+            // }
             //
-            // saveButton.innerHTML = 'Save';
+            //
+            // function getTodos() {
+            //     var storedItem = localStorage.getItem('container');
+            //     todos = JSON.parse(storedItem);
+            //     if (!container) {
+            //         container = [];
+            //     }
+            // }
+
+            // var storeLocal = container.innerHTML
+            // localStorage.setItem('todos', storeLocal);
+            // getTodos();
+            saveButton.innerHTML = 'Save';
 
         },
         editObj: editObj
